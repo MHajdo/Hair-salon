@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hairdresser Matej</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Frizerstvo Matej</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#storitve">Storitve</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#termin">Rezerviraj termin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vprašanja">Pogosta vprašanja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontakt">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#onas" data-bs-toggle="modal" data-bs-target="#exampleModal">O nas</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Iskanje..." aria-label="Iskanje">
+                <button class="btn btn-outline-success" type="submit">Iskanje</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- konec navbara -->
+
+<!-- carousel slike-->
+<div class="container-fluid">
+    <div id="carouselFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner h-50">
+            <div class="carousel-item active">
+                <img src="https://storage.googleapis.com/smartninja-org-assets/curriculums/wd1/img/hairsalon-slider-1.jpg" class="d-block w-100 img-responsive"
+                     alt="friziranje1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://storage.googleapis.com/smartninja-org-assets/curriculums/wd1/img/hairsalon-slider-2.jpg"
+                     class="d-block w-100 img-responsive" alt="friziranje2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFade"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>
+<!-- konec -->
+
+<!-- storitve cards -->
+<div class="container text-center mt-3" id="storitve">
+        <h2 class="text-center">Storitve</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://images.24ur.com/media/images/1500x1000/May2021/68ef95132c7110cd8550_62557320.jpg?v=a8a4&fop=fp:0.47:0.59"
+                         class="card-img-top img-fluid img-thumbnail"
+                         alt="nega las">
+                    <div class="card-body">
+                        <h5 class="card-title">Nega las</h5>
+                        <p class="card-text">Popolno profesionalno razvajanje vaših las - vse do čudovitega izgleda!
+                            Prilagojena nega las za lase, ki se začne z vami.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="data:image/jpeg;base64,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"
+                         class="card-img-top img-fluid img-thumbnail" alt="striženje">
+                    <div class="card-body">
+                        <h5 class="card-title">Striženje</h5>
+                        <p class="card-text">Moško in žensko striženje.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://www.bodieko.si/wp-content/uploads/2022/09/Barvanje-las.jpg"
+                         class="card-img-top img-fluid img-thumbnail"
+                         alt="barvanje">
+                    <div class="card-body">
+                        <h5 class="card-title">Barvanje las</h5>
+                        <p class="card-text">Ženske frizure bodo letos v znamenju zdravih, negovalnih las in
+                            naravnih
+                            barv.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- konec -->
+
+<!-- termin tabeli -->
+
+<div class="container mt-3" id="termin">
+    <h2 class="text-center">Rezerviraj termin</h2>
+    <div class="row">
+        <div class="col md-4 m-auto">
+
+                <div class="m-auto">
+                    <input type="text" class="form-control mb-2" placeholder="Ime in priimek">
+
+                    <input type="text" class="form-control mb-2" placeholder="Telefonska številka">
+
+                    <input type="text" class="form-control mb-2" placeholder="Termin">
+
+                    <textarea class="form-control mb-2" rows="3" placeholder="Opombe..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Pošlji</button>
+
+        </div>
+
+
+        <div class="col md-4">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Dan</th>
+                    <th scope="col">Delovni čas</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Ponedeljek</td>
+                    <td>8:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Torek</td>
+                    <td>8:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Sreda</td>
+                    <td>8:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Četrtek</td>
+                    <td>8:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Petek</td>
+                    <td>8:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Sobota</td>
+                    <td>8:00 - 16:00</td>
+                </tr>
+                </tbody>
+
+            </table>
+            <p>* Ob nedeljah in praznikih zaprto</p>
+        </div>
+    </div>
+</div>
+<!-- konec -->
+
+<!-- vprasanja accordion -->
+<div class="container mt-3" id="vprašanja">
+    <h2 class="text-center">Pogosta vprašanja</h2>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Ali barva za lase pobarva tudi kožo?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Barva za lase ne pobarva kože. Pobarva lase in tudi nohte (so prav tako iz roževine!), če rok ne zaščitimo z rokavicami. Kljub temu pa svetujemo, da po končanem barvanju z mokro bombažno blazinico z ušes in roba lasišča obrišemo madeže, nastale med barvanjem. Če se zgodi, da po tem, ko barvo že izperemo z las, opazimo rahlo obarvan predel tik ob lasišču (to se lahko zgodi takrat, kadar pri izpiranju barve ne uporabimo šampona), ne skrbimo, saj bo to kmalu izginilo.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Kakšen je na otip zdrav las?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Čvrst, ker ima v sebi veliko KERATINA, ki je glavna sestavina lasu. Za zdravje vaših las morate najprej spremeniti zavest o tem, kakšen je zdrav las in kaj morate narediti, da da boste dosegli pravo čvrstost lasu. Lepi, zdravi in sijoči lasje so že od nekdaj želja vsake ženske. Večina se namreč sooča z vsaj eno od težav, kot so poškodovani, tanki, pusti, grobi, izsušeni ali mastni lasje.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Kako vem, da je bila rezervacija potrjena?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Takoj, ko vašo rezervacijo potrdimo, boste prejeli obvestilo o tem na vašo telefonsko številko, ki ste jo vnesli v rezervacijski obrazec.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- konec accordion -->
+
+<hr>
+
+<!-- footer -->
+<footer class="container" id="kontakt">
+    <div class="row">
+        <div class="col md-4">
+            <h3>Kontakt</h3>
+            <p>Frizerski salon Matej<br>
+                Matej Hajdinjak, s.p.<br>
+                Trate 37<br>
+                9250 Gornja Radgona<br>
+                firezrskisalonmatej@mail.com<br>
+                041 111 111</p>
+        </div>
+
+        <div class="col md-4">
+            <img class="img-fluid" width="300px" src="https://t4.ftcdn.net/jpg/04/06/01/75/360_F_406017572_LWHdadRTIbtbNmpnXlbfKfRKgqZ3TaJf.jpg">
+        </div>
+
+        <div class="col md-4">
+            <h3>Navigiranje</h3>
+            <ul>
+                <li><a href="#storitve">Storitve</a></li>
+                <li><a href="#termin">Rezervacija termina</a></li>
+                <li><a href="#vprašanja">Pogosta vprašanja</a></li>
+                <li><a href="#onas" data-bs-toggle="modal" data-bs-target="#exampleModal">O nas</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- konec footer -->
+
+<!-- modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Frizerstvo Matej</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <h3>Trdne korenine, pogled v prihodnost</h3>
+          <p>Začetki naše družbe segajo kar nekaj desetletij nazaj – natančneje v leto 1951, ko so bili štirje frizerski saloni izločeni iz državnega podjetja Invalidskih delavnic. Ustanovljeno je bilo novo podjetje z imenom Brivsko-frizersko podjetje Ljubljana. Podjetje, kasneje preimenovano v Frizersko podjetje Ljubljana, se je širilo z novimi saloni in uvajalo nove storitve, med drugim tudi kozmetične storitve. Na področju pedikure in frizerskih storitev je naše podjetje vodilno še danes.
+
+Povezani smo bili v klube frizerjev, v katerih smo se zbirali zaradi izobraževanj in prirejali frizerska tekmovanja na vseh nivojih. Tako smo se udeleževali državnih, regionalnih in evropskih prvenstev. To pa je bil v tistih časih tudi praktično edini stik s stroko v svetu. Material, ki se je uporabljal je bil pretežno domač – Ilirija in ni bilo druge izbire. Naši frizerji so urejali tudi najpomembnejše funkcionarje. Frizerka iz salona na Stritarjeva je bila na primer najljubša frizerka Jovanke Broz. Spremljala jo je celo na potovanjih v tujino.
+
+Današnje ime je družba dobila kmalu po osamosvojitvi Slovenije, leta 1993. Zaradi pomanjkanja kvalitetnega frizerskega materiala na našem tržišču smo se takoj po osamosvojitvi Slovenije povezali z renomiranimi proizvajalci materiala ter prevzeli zastopstvo za oskrbo ostalih frizerjev v Sloveniji. In tako je še danes. Poleg 15ih salonov po Ljubljani smo tudi dolgoletni poslovni partner marsikaterega salona po Sloveniji.
+
+V vseh naših salonih uporabljamo profesionalno francosko kozmetiko znamke La Biosthetique, katera je dokazano izredno negovalna in efektivna . Naši frizerji se redno usposabljajo po konceptu popolne lepote “La Biosthetique” tako v tujini, kot na seminarjih, ki jih njihovi trenerji izvajajo pri nas. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zapri</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- konec modal -->
+
+<script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
